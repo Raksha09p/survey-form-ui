@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+:root {
+  /*variables*/
+  --header--height: 3rem;
+  --font--semi: 600;
+  /*colors*/
+  --color1: #08728d;
+  --color2: #002b36;
+  --colorhover: #086077;
+  --colorW: #fff;
+  --colorA: #d6e7eb;
+  --colorL: #f2f6f7;
+  /*font*/
+  --body-font: "Quicksand", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+}
+body {
+  background-color: var(--colorA);
+}
+
+.App {
+  text-align: center;
+}
+.MuiTypography-root {
+  color: var(--colorA);
+  background-color: var(--color1);
+}
+
+.nav-bar {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.form-container {
+  border: 1px solid var(--color1);
+  width: 50%;
+  margin: 2rem auto;
+  padding: 2rem;
+  left: 0;
+  top: 0;
+  background-color: var(--colorW);
+}
+
+.MuiInputBase-root {
+  background-color: var(--colorL);
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: var(--color2);
+}
+
+.button {
+  width: 40%;
+}
+
+.MuiButton-label {
+  padding: 1rem;
+  color: var(--colorW);
+  background-color: var(--color1);
+}
+
+.MuiButton-label:hover {
+  color: var(--colorA);
+  background-color: var(--colorhover);
+}
+
+/*dark mode*/
+.dark-mode {
+  --color1: #90ccdb;
+  --color2: #c9d9dd;
+  --colorW: #08728d;
+  --colorhover: #c8e4eb;
+  --colorA: #002b36;
+  --colorL: #bfdde3;
+}
+
+.switch-toggle {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  height: 100%;
+}
+.switch-btn,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.button-check {
+  position: relative;
+  width: 90px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+.switch-btn {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #90ccdb;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+#button-check .switch-btn:before,
+#button-check .switch-btn:after {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 32px;
+  height: 21px;
+  color: #000;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: #08728d;
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#button-check .switch-btn:before {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACIklEQVRIS+WW61FUQRCFz4lAM1AjECIQIlAjUCIAIlAjECJQIxAjECMQIwAiACJo69vquTU77H2uFD/sqq3aurt3vu6e0w/rkcyPxNUscETsSHot6dT27TZOTwJHxHtJHyQ9T9gP228eDJwRfpFEpLV9s40zi6034oT+lPQ0T7+W9Cy/f7L9cTFV2nzHEUFKf1fQU0mAbhJ2bPvkn4IjggiJtKT3wPZXIBERDxZxRBAZQsJQ71GJrAKvPV8S+dodZ7SXmeJr20XFq7Mj4lzSK0kXtneXAMs7LRilomJs3zagzpps7Nq+WApvwWfZIO5sFzXXYDJARrCtSqoF042eDB0aEQjtXcLf2sbZ2daCR1WbpUaKcRBHuZLZKZ8NTpHRLr9nmMCJfE0PYylYBE54LUQecQV0tKsxKL/3gSfVaUQQOUDSXoy0l3vHCQTJB7HSjFZTrU/VV7ZfTPE875ymUwQ39FrX41swXepzvnmvjodOTAfIAFfwsue/Xe234LpOz23vT4m67z8RsZcNiXPXOuG9sRgRTJ3DPKwbEEscGDprExgRIIqt6jS3ltJ+f9km+s42LgK5BDCPMVTI/F2NxinWRHrHiG3LbGgDaeuUBoEqextFc6f4CHRvU2cbXPbyIGqyrlOugWf1lol4UHQ9WP7wrK+hjG6ZOaOp0yK4sWwT5cnYTjYKLpSqThEJu3VtwLgCMnE2ZeeeDB4Lc+7v/x/4L9F+6B+RJanpAAAAAElFTkSuQmCC);
+}
+
+#button-check .switch-btn:after {
+  content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAACTElEQVRIS9VWMW4UMRT9f+RtYZHmW9uRG5ALICUFNCARmlDCEeAEbE7CbgeiIJGgAgkKqAk3CAXSrj1SNi1rjdG37MjMembNsmSEq9HM+D+/5/efjdDTwJ5wYSPg0Wi0Y4x5zIsWQkxns9nZnxLYCLgsyz1E/Mhg1tr9qqo+/f/AUsq71trrWuvXTTY5jInoEBHPlVLvU2okpZZS3rHWvgOAAQAcNsGHw+FQCLHLBY0xp4vFYhEXZ1AAeIWIPwHgfgo8CRwmRsVWwNv2NHduq7miAhe8aq315wDmGd/yjL/FjInoNgC8BYBrKbVCjU5XE9EjAPgRQIlo11r7HBEPYsbW2mNEPNJan/J7Dz5K+SMLuLFvTwDgRUfb8D4/01pPclorq4+ZKQB8jQpOEfHY9zGzd2ECAAy+H5h3LSALuCxLlvIBF0LEh0opBxqGlPLAWvvGL+SkqqrftqKznXwM3gw/GWOcadhIg8Hg3L+faq1Z8pVBRCyxY75cLm+EuUIIZ0IeQojvIV4vGUspx2yc8FOIwjgsUmxbWLsYjed6tY6UUmP3HE3sB9hLvRNJ7RJpC1K7hPNSn61I3eXAf2quLuBEO02KonDOruuaHRwMxym3t7V2YgAiWhcgDPp0KwHSEpnj0NNRB5wg4ngrkelBXwLABSLeU0p9CUBdx+JfHRIRaMC6mmPR3z74aOu6CCSPRe+Hy4sAqzWfzz80zdua1b1cfbpai7/l3LnW1cg6nZpFegPmeK3r2oVGURSTK7vQr5Mx5/tGUucUXvfPL5OXpC60Ej2rAAAAAElFTkSuQmCC);
+}
+
+#button-check .switch-btn:after {
+  right: -700px;
+  left: auto;
+  background-color: #fff;
+}
+
+#button-check .checkbox:checked + .switch-btn:before {
+  left: -50px;
+}
+
+#button-check .checkbox:checked + .switch-btn:after {
+  right: 2px;
+}
+
+#button-check .checkbox:checked ~ .layer {
+  background-color: #90ccdb;
+}
+.modalLoader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+  margin: auto;
+  width: 40%;
+  margin-top: 20rem;
+  align-content: space-between;
+}
+
+.modal-success {
+  background-color: green;
+  width: fit-content;
+  margin-block-start: 2rem;
+  margin-inline-start: auto;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+}
+.modal-error {
+  background-color: red;
+  width: fit-content;
+  margin-block-start: 2rem;
+  margin-inline-start: auto;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+}
+
+.message {
+  display: flex;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  align-items: center;
+}

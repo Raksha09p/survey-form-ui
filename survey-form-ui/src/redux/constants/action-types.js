@@ -1,0 +1,4 @@
+export const ActionTypes = {
+    SET_SURVEYFORMS : "SET_SURVEYFORMS",
+    SET_SURVEYNAME : "SET_SURVEYNAME"
+};
